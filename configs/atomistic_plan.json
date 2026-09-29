@@ -1,0 +1,21 @@
+{
+  "scope": "Planteamiento y estado del arte; implementación inicial",
+  "system": ["TeO2", "ZnO"],
+  "target": "Tg experimental",
+  "stages": [
+    {"id": "experimental_data", "status": "preparacion_disponible", "module": "scripts/atomistic_extension.py"},
+    {"id": "simulation_inputs", "status": "por_definir", "module": "src/tellurite_tg/atomistic/simulation.py"},
+    {"id": "aimd_execution", "status": "pendiente", "module": "src/tellurite_tg/atomistic/simulation.py"},
+    {"id": "structural_descriptors", "status": "pendiente", "module": "src/tellurite_tg/atomistic/descriptors.py"},
+    {"id": "paired_evaluation", "status": "prototipo_sin_validar_con_aimd", "module": "scripts/atomistic_extension.py"}
+  ],
+  "decisions_pending": [
+    "Selección de composiciones sin utilizar Tg para elegir casos favorables",
+    "Programa, funcional, pseudopotenciales y recursos de cómputo",
+    "Número de átomos, configuraciones independientes y protocolo térmico",
+    "Convergencia y validación frente a información estructural experimental",
+    "Definición de vecinos, promedios e incertidumbre de descriptores",
+    "Tamaño del conjunto y diseño final de evaluación"
+  ],
+  "mlip": "extension_futura_fuera_del_alcance_inicial"
+}

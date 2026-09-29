@@ -1,0 +1,46 @@
+{
+  "seed": 42,
+  "data": {
+    "minimum_component_frequency": 5,
+    "composition_sum_tolerance": 1.0,
+    "tellurite_min_wt_percent": 52.0,
+    "apply_component_domain_filter": false,
+    "zno_min_mol_percent": 10.0,
+    "zno_max_mol_percent": 20.0,
+    "teo2_min_mol_percent": 60.0,
+    "teo2_max_mol_percent": 90.0,
+    "la2o3_min_mol_percent": 1.0,
+    "la2o3_max_mol_percent": 10.0,
+    "retain_repeated_measurements": true,
+    "target_min_C": 100.0,
+    "target_max_C": 600.0,
+    "fingerprint_decimals": 3
+  },
+  "validation": {
+    "group_folds": 5,
+    "random_split_seeds": [11, 23, 42, 57, 89],
+    "random_test_size": 0.2
+  },
+  "models": {
+    "ridge": {
+      "alpha": 10.0
+    },
+    "random_forest": {
+      "n_estimators": 500,
+      "max_features": 0.7,
+      "min_samples_leaf": 2,
+      "n_jobs": -1
+    },
+    "xgboost": {
+      "n_estimators": 500,
+      "max_depth": 4,
+      "learning_rate": 0.03,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_weight": 2.0,
+      "reg_lambda": 1.0,
+      "objective": "reg:squarederror",
+      "n_jobs": -1
+    }
+  }
+}
